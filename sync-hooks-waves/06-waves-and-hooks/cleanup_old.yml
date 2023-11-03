@@ -1,10 +1,10 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  namespace: example02
-  generateName: my-db-upgrade-
-  annotations:
-    argocd.argoproj.io/hook: PreSync
+  namespace: example06
+  generateName: cleanup-after-sync-
+  labels:
+    codefresh.io/cert: cleanup-job  
 spec:
   template:
     spec:
